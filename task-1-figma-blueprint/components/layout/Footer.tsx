@@ -17,40 +17,31 @@ export default function Footer() {
   return (
     <footer className="bg-white  py-4">
       <div className="flex justify-between items-center py-10 ">
-        {" "}
         <div className="flex items-center gap-2">
-          {" "}
           <Image src="/Logo.svg" alt="Car Icon" width={32} height={32} />{" "}
           <span className="font-semibold text-lg text-gray-900">
-            {" "}
-            Car Rental{" "}
-          </span>{" "}
-        </div>{" "}
+            Car Rental
+          </span>
+        </div>
         {Icon.map((item, index) => (
-          <div key={index} className="flex items-center gap-2 ">
-            {" "}
-            <Image src={item.src} alt={item.name} width={32} height={32} />{" "}
+          <div key={index} className="flex items-center gap-2 text-base ">
+            <Image src={item.src} alt={item.name} width={32} height={32} /> 
             <div>
-              {" "}
-              <h4 className="font-semibold">{item.name}</h4>{" "}
-              <p className="text-sm">{item.desc}</p>{" "}
-            </div>{" "}
+              <h4 className="">{item.name}</h4>
+              <p className="font-semibold">{item.desc}</p>
+            </div>
           </div>
         ))}{" "}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* Left Column */}
         <div>
-          <h3 className="font-semibold mb-2">Faucibus faucibus</h3>
-          <p className="text-sm text-gray-600 mb-4">
-            pellentesque dictum turpis. Id pellentesque turpis massa a id
-            iaculis lorem tincidunt.
-          </p>
+          <h3 className="font-semibold mb-2">Faucibus faucibus pellentesque dictum turpis. Id pellentesque turpis massa a id
+            iaculis lorem tincidunt.</h3>
           <div className="flex gap-4">
-            <Facebook size={20} className="text-gray-700 hover:text-primary" />
-            <Instagram size={20} className="text-gray-700 hover:text-primary" />
-            <X size={20} className="text-gray-700 hover:text-primary" />
-            <Youtube size={20} className="text-gray-700 hover:text-primary" />
+            <Facebook size={20} className="text-white bg-black p-1 h-6 w-6 rounded-[50%] hover:text-primary" />
+            <Instagram size={20} className="text-white bg-black p-1 h-6 w-6 rounded-[50%] hover:text-primary" />
+            <X size={20} className="text-white bg-black p-1 h-6 w-6 rounded-[50%] hover:text-primary" />
+            <Youtube size={20} className="text-white bg-black p-1 h-6 w-6 rounded-[50%] hover:text-primary" />
           </div>
         </div>
 
@@ -61,7 +52,7 @@ export default function Footer() {
             {links.useful.map((link) => (
               <li
                 key={link}
-                className="text-sm text-gray-600 hover:text-primary cursor-pointer"
+                className="text-sm text-black hover:text-primary cursor-pointer"
               >
                 {link}
               </li>
@@ -75,7 +66,7 @@ export default function Footer() {
             {links.vehicles.map((vehicle) => (
               <li
                 key={vehicle}
-                className="text-sm text-gray-600 hover:text-primary cursor-pointer"
+                className="text-sm text-black hover:text-primary cursor-pointer"
               >
                 {vehicle}
               </li>
