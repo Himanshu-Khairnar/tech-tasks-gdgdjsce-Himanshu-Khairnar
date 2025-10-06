@@ -1,8 +1,10 @@
-import Card from "@/components/section/Card";
+import Banner from "@/components/section/Banner";
+import Banner2 from "@/components/section/Banner2";
 import ChooseYourCar from "@/components/section/ChooseYourCar";
 import Features from "@/components/section/Features";
 import HeroSection from "@/components/section/HeroSection";
 import InfoBlock from "@/components/section/InfoBlock";
+import Mobile from "@/components/section/Mobile";
 import React from "react";
 
 export default function page() {
@@ -32,6 +34,13 @@ export default function page() {
 
 
         <ChooseYourCar />
+
+        <Banner />
+
+        <Mobile />
+
+        <Banner2 />
+
       </div>
     </div>
   );

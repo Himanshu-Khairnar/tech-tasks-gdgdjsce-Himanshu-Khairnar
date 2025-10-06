@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card";
+import Card from "../shared/Card";
 import { MoveRight } from "lucide-react";
 export default function ChooseYourCar() {
   return (

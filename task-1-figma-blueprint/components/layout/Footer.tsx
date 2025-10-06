@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Facebook, Instagram, Youtube, X } from "lucide-react";
+import Download from "../shared/Download";
 
 export default function Footer() {
   const links = {
@@ -76,22 +77,7 @@ export default function Footer() {
 
         <div>
           <h4 className="font-semibold mb-3">Download App</h4>
-          <div className="flex flex-col justify-center gap-4">
-            <Image
-              src="/App Store.svg"
-              alt="App Store"
-              width={140}
-              height={45}
-              className="cursor-pointer"
-            />
-            <Image
-              src="/Google Play.svg"
-              alt="Play Store"
-              width={140}
-              height={45}
-              className="cursor-pointer"
-            />
-          </div>
+        <Download className="flex-col justify-center" />
         </div>
       </div>
     </footer>
