@@ -1,7 +1,7 @@
 import Card from "@/components/shared/Card";
 import Image from "next/image";
 import React from "react";
-
+import CompanyLogo from "@/components/shared/CompanyLogo";
 const list = [
   {
     name: "All Vehicles",
@@ -55,9 +55,7 @@ export default function page() {
         </div>
 
       </div>
-      <div className="my-10">
-        <Image src="/vehicles/Logos.svg" alt="Hero Image" height={400} width={1000} />
-      </div>
+      <CompanyLogo />
     </div>
   );
 }

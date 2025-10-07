@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Facebook, Instagram, Youtube, X } from "lucide-react";
 import Download from "../shared/Download";
+import IconDetail from "../shared/IconDetail";
 
 export default function Footer() {
   const links = {
@@ -25,13 +26,7 @@ export default function Footer() {
           </span>
         </div>
         {Icon.map((item, index) => (
-          <div key={index} className="flex items-center gap-2 text-base ">
-            <Image src={item.src} alt={item.name} width={32} height={32} /> 
-            <div>
-              <h4 className="">{item.name}</h4>
-              <p className="font-semibold">{item.desc}</p>
-            </div>
-          </div>
+          <IconDetail key={index} item={item} />
         ))}{" "}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
