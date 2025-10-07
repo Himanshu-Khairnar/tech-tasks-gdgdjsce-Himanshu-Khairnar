@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Car, Fuel, Snowflake, Settings } from "lucide-react";
 
-export default function CarCard() {
+export default function CarCard({}) {
   return (
     <Card className="w-[310px] rounded-xl h-[400px] border-none  hover:shadow-md transition-all duration-200" >
       <CardContent className="p-4">

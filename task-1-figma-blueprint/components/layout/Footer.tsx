@@ -17,7 +17,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-white  py-4">
+    <footer className="bg-white  py-4 mb-10 ">
       <div className="flex justify-between items-center py-10 ">
         <div className="flex items-center gap-2">
           <Image src="/Logo.svg" alt="Car Icon" width={32} height={32} />{" "}

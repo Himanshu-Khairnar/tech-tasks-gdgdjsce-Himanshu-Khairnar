@@ -9,8 +9,8 @@ import React from "react";
 
 export default function page() {
   return (
-    <div className="min-h-screen space-y-10">
-      <HeroSection />
+    <div className="min-h-screen space-y-16">
+      <HeroSection  />
       <div className="flex justify-center gap-20">
         <Features
           name="Availability"

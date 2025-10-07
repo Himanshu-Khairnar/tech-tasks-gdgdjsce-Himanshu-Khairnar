@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroSectionForm from "../forms/HeroSectionForm";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -12,19 +13,16 @@ export default function HeroSection() {
           Aliquam adipiscing velit semper morbi. Purus non eu cursus porttitor
           tristique et gravida. Quis nunc interdum gravida ullamcorper.
         </p>
-        <button className="bg-yellow-400 text-black px-5 py-2 rounded-md font-semibold hover:bg-yellow-300 transition">
+        <Link href={'/vehicles'} className="bg-secondary text-white px-5 py-2 rounded-md font-semibold hover:bg-yellow-300 transition">
           View all cars
-        </button>
+        </Link>
       </div>
 
-      <div className="bg-white text-black p-6 rounded-2xl w-80 shadow-lg z-10">
-        <h2 className="text-xl font-semibold mb-4 text-center">
-          Book your car
-        </h2>
+      <HeroSectionForm className="bg-white text-black " />
 
-      <HeroSectionForm/>
+      
 
-      </div>
+
       <Image
         src="/HomePage/Grip.svg"
         alt="grip"

@@ -3,7 +3,7 @@ import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-
+import { Toaster } from "@/components/ui/sonner";
 const workSans = Work_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"], // you can customize weights
@@ -20,12 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={` ${workSans.className} antialiased px-[290px]`}
-      >
+      <body className={` ${workSans.className} antialiased px-[290px]`}>
         <Header />
         {children}
-        <Footer/>
+        <Footer />
+        <Toaster richColors position="top-right" />
       </body>
     </html>
   );

@@ -2,6 +2,8 @@ import HeroAboutContact from "@/components/section/HeroAbout&Contact";
 import CompanyLogo from "@/components/shared/CompanyLogo";
 import React from "react";
 import IconDetail from "@/components/shared/IconDetail";
+import ContactUsBook from "@/components/section/ContactUsBook";
+import ContactUsBlog from "@/components/section/ContactUsBlog";
 
 const Icon: { src: string; name: string; desc: string }[] = [
   { src: "Address.svg", name: "Address", desc: "Oxford Ave. Cary, NC 27511" },
@@ -12,13 +14,15 @@ const Icon: { src: string; name: string; desc: string }[] = [
 
 export default function page() {
   return (
-    <div>
+    <div className="space-y-16 mb-10">
       <HeroAboutContact title="Contact Us" />
+      <ContactUsBook />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {Icon.map((item, index) => (
           <IconDetail key={index} item={item} />
-        ))}{" "}
+        ))}
       </div>
+      <ContactUsBlog />   
       <CompanyLogo />
     </div>
   );
