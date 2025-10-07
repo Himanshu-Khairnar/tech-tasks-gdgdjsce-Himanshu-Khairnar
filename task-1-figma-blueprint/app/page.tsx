@@ -33,7 +33,7 @@ export default function page() {
       <div className="mb-10">
 
 
-        <ChooseYourCar />
+        <ChooseYourCar title={"Choose your car that suits you"} />
 
         <Banner />
 

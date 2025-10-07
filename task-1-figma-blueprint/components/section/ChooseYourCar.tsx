@@ -1,12 +1,12 @@
 import React from "react";
 import Card from "../shared/Card";
 import { MoveRight } from "lucide-react";
-export default function ChooseYourCar() {
+export default function ChooseYourCar({ title }: { title: string }) {
   return (
     <div className="">
       <div className="flex items-center justify-between">
         <h2 className="text-[42px] md:text-[50px] font-bold text-gray-900">
-          Choose the car that suits you
+          {title}
         </h2>
 
         <button className="flex items-center gap-2 text-base font-semibold  hover:underline">

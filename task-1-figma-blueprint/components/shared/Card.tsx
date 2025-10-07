@@ -47,7 +47,7 @@ export default function CarCard() {
       </CardContent>
 
       <CardFooter className="p-4 pt-0">
-        <Button className="w-full bg-[#6C63FF] hover:bg-[#5b54e1] text-white font-medium rounded-lg">
+        <Button >
           View Details
         </Button>
       </CardFooter>
