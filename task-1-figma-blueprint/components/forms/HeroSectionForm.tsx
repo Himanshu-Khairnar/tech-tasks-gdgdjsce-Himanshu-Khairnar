@@ -22,7 +22,7 @@ export default function HeroSectionForm({ className }: { className?: string }) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Booking Successful 🎉", {
-      description: "Your car has been booked successfully!",
+      description: "Car has been rented successfully!",
       duration: 3000,
     });
 

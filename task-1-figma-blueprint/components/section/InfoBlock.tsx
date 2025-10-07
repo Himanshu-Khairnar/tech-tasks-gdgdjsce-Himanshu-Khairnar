@@ -32,9 +32,9 @@ export default function InfoBlock() {
       </div>
       <div className="flex-1 flex flex-col gap-6">
         {list.map((item) => (
-          <div key={item.srno}>
+          <div key={item.srno} className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
-              <p className="bg-[#5937E0] h-8 w-8 rounded-full text-center p-1 text-white">{item.srno}</p>
+              <p className="bg-primary h-8 w-8 rounded-full text-center  p-1 text-white">{item.srno}</p>
               <h3 className="text-base font-bold">{item.title}</h3>
             </div>
             <p className="text-gray-700 text-sm">{item.desc}</p>

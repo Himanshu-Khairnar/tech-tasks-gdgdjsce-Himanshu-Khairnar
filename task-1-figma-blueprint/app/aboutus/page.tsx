@@ -10,7 +10,7 @@ import AboutUsBanner from '@/components/section/AboutUsBanner'
 
 export default function page() {
   return (
-    <div className='space-y-20 '>
+    <div className='space-y-20 page-enter'>
         <HeroAboutContact title='About Us'/>
         <AboutUsFeature/>
         <AboutUsCounter/>

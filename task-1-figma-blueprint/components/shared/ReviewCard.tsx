@@ -13,8 +13,8 @@ export default function ReviewCard({
   company?: string;
 }) {
   return (
-    <Card className="w-[320px] h-fit rounded-2xl  overflow-hidden  hover:shadow-xl transition-all duration-300">
-      <CardContent className="p-6 text-center bg-white relative">
+    <Card className="w-[320px] h-fit rounded-2xl bg-gray-50  overflow-hidden hover:bg-gray-100  hover:shadow-xl transition-all duration-300">
+      <CardContent className="p-6 text-center  relative">
         <div className="flex justify-start mb-4">
           <Image
             src="/aboutus/quote.svg"

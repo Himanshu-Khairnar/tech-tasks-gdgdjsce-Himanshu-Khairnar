@@ -1,7 +1,14 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-
+'use client'
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 export default function AboutUsBanner() {
+  const handleSubmit = () => {
+    toast.success("Booking Successful 🎉", {
+      description: "Car has been rented successfully!",
+      duration: 3000,
+    });
+  };
   return (
     <section className="relative w-full max-w-[1300px] mx-auto rounded-3xl overflow-hidden bg-primary text-white px-10 py-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-lg">
       <div className="absolute inset-0 top-10 opacity-08">
@@ -24,12 +31,15 @@ export default function AboutUsBanner() {
           bibendum ullamcorper in…
         </p>
 
-        <Button className="w-[200px]" variant="secondary">
+        <Button
+          className="w-[200px]"
+          onClick={handleSubmit}
+          variant="secondary"
+        >
           Book now
         </Button>
       </div>
 
-      {/* Right blurred car image */}
       <div className="relative z-10 w-full  flex justify-center">
         <Image
           src="/aboutus/BlurCar.svg"
@@ -40,5 +50,5 @@ export default function AboutUsBanner() {
         />
       </div>
     </section>
-  )
+  );
 }

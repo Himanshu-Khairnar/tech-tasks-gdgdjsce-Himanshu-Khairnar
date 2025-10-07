@@ -12,7 +12,7 @@ export default function Banner() {
   ];
 
   return (
-    <section className="relative bg-[#5937E0] py-16 px-6 md:px-16 rounded-2xl text-center mt-10 overflow-hidden">
+    <section className="relative bg-primary py-16 px-6 md:px-16 rounded-2xl text-center mt-10 overflow-hidden">
       <div className="absolute -left-3 top-2/5 -translate-y-1/2 w-[700px] opacity-70 rotate-[20deg]">
         <Image
           src="/HomePage/grip2.svg"
@@ -23,7 +23,7 @@ export default function Banner() {
         />
       </div>
 
-      <div className="absolute inset-0 flex justify-center items-center opacity-30">
+      <div className="absolute inset-0 flex justify-center items-center opacity-20 ">
         <Image
           src="/HomePage/BlurCarBanner.svg"
           alt="Car background"
@@ -45,10 +45,10 @@ export default function Banner() {
         {facts.map((fact, index) => (
           <Card
             key={index}
-            className="flex items-center justify-center rounded-2xl shadow-lg h-[80px] w-[180px] "
+            className="flex items-center justify-center rounded-2xl shadow-lg h-[80px] w-[180px] bg-gray-50 hover:bg-gray-100 hover:shadow-md transition-all duration-200"
           >
-            <CardContent className="flex items-center gap-4 p-4">
-              <div className="bg-[#f9a826] p-3 rounded-xl flex items-center justify-center">
+            <CardContent className="flex items-center gap-4 p-4 ">
+              <div className="bg-secondary hover:bg-secondary/5 p-3 rounded-xl flex items-center justify-center">
                 <Image src={fact.img} alt={fact.label} width={24} height={24} />
               </div>
               <div className="text-left">

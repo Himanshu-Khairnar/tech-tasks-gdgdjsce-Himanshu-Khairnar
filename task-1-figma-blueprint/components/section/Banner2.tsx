@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export default function HeroBanner() {
   return (
-    <section className="relative bg-[#6b32f4] rounded-2xl py-16 px-8 md:px-16 overflow-hidden mt-10 text-white">
+    <section className="relative bg-primary rounded-2xl py-16 px-8 md:px-16 overflow-hidden mt-10 text-white">
       <div className="absolute inset-0 opacity-80">
         <Image
           src="/HomePage/grip2.svg"
@@ -36,13 +36,13 @@ export default function HeroBanner() {
           Diam tincidunt tincidunt erat
         </p>
 
-        <div className="flex items-center bg-white p-1 rounded-lg shadow-lg overflow-hidden w-full max-w-md">
+        <div className="flex items-center bg-white p-2 rounded-lg shadow-lg overflow-hidden w-full max-w-md">
           <Input
             type="text"
             placeholder="City"
             className="border-none text-gray-700 placeholder:text-gray-400 focus-visible:ring-0 focus-visible:ring-offset-0 px-4"
           />
-          <Button className=" rounded-lg bg-[#f9a826] text-white hover:bg-[#f59e0b] px-6">
+          <Button variant={'secondary'} className="w-[30%] ">
             Search
           </Button>
         </div>

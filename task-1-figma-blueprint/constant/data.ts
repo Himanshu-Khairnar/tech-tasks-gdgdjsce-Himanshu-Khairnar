@@ -1,5 +1,8 @@
+// src/constant/data.ts
+
 export const carList = [
   {
+    id: 1,
     name: "Mercedes",
     type: "Sedan",
     price: 25,
@@ -7,9 +10,11 @@ export const carList = [
     seats: 5,
     doors: 4,
     distance: "12k km",
+    transmission: "Automatic",
     image: "/carImage/car1.svg",
   },
   {
+    id: 2,
     name: "BMW",
     type: "Cabriolet",
     price: 55,
@@ -17,9 +22,11 @@ export const carList = [
     seats: 4,
     doors: 2,
     distance: "8k km",
+    transmission: "Manual",
     image: "/carImage/car2.svg",
   },
   {
+    id: 3,
     name: "Ford",
     type: "Pickup",
     price: 45,
@@ -27,9 +34,11 @@ export const carList = [
     seats: 2,
     doors: 2,
     distance: "18k km",
+    transmission: "Automatic",
     image: "/carImage/car3.svg",
   },
   {
+    id: 4,
     name: "Porsche",
     type: "SUV",
     price: 50,
@@ -37,9 +46,11 @@ export const carList = [
     seats: 5,
     doors: 4,
     distance: "22k km",
+    transmission: "Automatic",
     image: "/carImage/car4.svg",
   },
   {
+    id: 5,
     name: "Toyota",
     type: "Minivan",
     price: 40,
@@ -47,9 +58,11 @@ export const carList = [
     seats: 7,
     doors: 5,
     distance: "35k km",
+    transmission: "Manual",
     image: "/carImage/car5.svg",
   },
   {
+    id: 6,
     name: "Tesla",
     type: "Sedan",
     price: 65,
@@ -57,9 +70,11 @@ export const carList = [
     seats: 5,
     doors: 4,
     distance: "6k km",
+    transmission: "Automatic",
     image: "/carImage/car6.svg",
   },
   {
+    id: 7,
     name: "Audi",
     type: "Cabriolet",
     price: 70,
@@ -67,9 +82,11 @@ export const carList = [
     seats: 4,
     doors: 2,
     distance: "10k km",
+    transmission: "Manual",
     image: "/carImage/car7.svg",
   },
   {
+    id: 8,
     name: "Kia",
     type: "SUV",
     price: 35,
@@ -77,9 +94,11 @@ export const carList = [
     seats: 5,
     doors: 4,
     distance: "28k km",
+    transmission: "Automatic",
     image: "/carImage/car8.svg",
   },
   {
+    id: 9,
     name: "Maybach",
     type: "Sedan",
     price: 80,
@@ -87,6 +106,7 @@ export const carList = [
     seats: 5,
     doors: 4,
     distance: "14k km",
+    transmission: "Automatic",
     image: "/carImage/car9.svg",
   },
 ];

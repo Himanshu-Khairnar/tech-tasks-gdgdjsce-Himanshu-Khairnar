@@ -14,7 +14,7 @@ export default function ContactUsBlog() {
         {list.map((item, index) => (
           <div
             key={index}
-            className="  rounded-lg mb-4 hover:shadow-lg transition-shadow cursor-pointer p-2"
+            className=" bg-gray-50 rounded-lg mb-4 hover:shadow-lg hover:bg-gray-100 transition-shadow cursor-pointer p-2"
           >
             <Image
               src={"/ContactUs/BookCar.svg"}
