@@ -18,11 +18,10 @@
   animation: fadeIn 0.5s ease-in-out both;
 }
 
-@theme{
-  --color-primary: #5937E0;
-  --color-secondary: #FF9E0C;
-}
+
 @theme inline {
+  --color-primary: #5937e0;
+  --color-secondary: #ff9e0c;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
