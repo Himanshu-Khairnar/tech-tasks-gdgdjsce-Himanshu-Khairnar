@@ -1,5 +1,6 @@
 import React from "react";
 import ReviewCard from "../shared/ReviewCard";
+
 const reviews = [
   {
     id: 1,
@@ -26,8 +27,12 @@ const reviews = [
 
 export default function AboutUsReview() {
   return (
-    <div>
-      <div className="flex justify-center gap-6">
+    <section className="py-12">
+      <h2 className="text-center text-3xl md:text-4xl font-bold mb-10">
+        What Our Clients Say
+      </h2>
+
+      <div className="flex flex-wrap justify-center gap-6 px-4">
         {reviews.map((review) => (
           <ReviewCard
             key={review.id}
@@ -38,6 +43,6 @@ export default function AboutUsReview() {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

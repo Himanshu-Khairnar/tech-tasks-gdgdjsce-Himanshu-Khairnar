@@ -1,4 +1,5 @@
 import React from "react";
+
 const features = [
   {
     title: "Variety Brands",
@@ -24,18 +25,26 @@ const features = [
 
 export default function AboutUsFeature() {
   return (
-    <div className="flex gap-8">
-      <h1 className="text-[42px] font-bold w-[300px]">
+    <section className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16 px-6 md:px-12 py-12">
+      <h1 className="text-3xl md:text-[42px] font-bold text-center md:text-left max-w-[320px]">
         Where every drive feels extraordinary
       </h1>
-      <div className="grid grid-cols-2 gap-4">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl">
         {features.map((feature, index) => (
-          <div key={index} className="space-y-2">
-            <h2 className="text-xl font-bold">{feature.title}</h2>
-            <p className="text-sm">{feature.description}</p>
+          <div
+            key={index}
+            className="space-y-2 hover:translate-y-1 transition-transform duration-300"
+          >
+            <h2 className="text-lg md:text-xl font-bold text-black">
+              {feature.title}
+            </h2>
+            <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+              {feature.description}
+            </p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

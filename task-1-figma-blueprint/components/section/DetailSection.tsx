@@ -19,42 +19,25 @@ export default function DetailSection({ carId }: { carId: string | null }) {
   if (!car) return <p>Car not found</p>;
 
   const carFeatures = [
-    {
-      id: 1,
-      icon: <Settings size={22} />,
-      title: "Gear Box",
-      value: car.transmission,
-    },
+    { id: 1, icon: <Settings size={22} />, title: "Gear Box", value: car.transmission },
     { id: 2, icon: <Fuel size={22} />, title: "Fuel", value: car.fuel },
     { id: 3, icon: <DoorOpen size={22} />, title: "Doors", value: car.doors },
-    {
-      id: 4,
-      icon: <Snowflake size={22} />,
-      title: "Air Conditioner",
-      value: "Yes",
-    },
+    { id: 4, icon: <Snowflake size={22} />, title: "Air Conditioner", value: "Yes" },
     { id: 5, icon: <User size={22} />, title: "Seats", value: car.seats },
-    {
-      id: 6,
-      icon: <Route size={22} />,
-      title: "Distance",
-      value: car.distance,
-    },
+    { id: 6, icon: <Route size={22} />, title: "Distance", value: car.distance },
   ];
 
   const handleSubmit = () => {
-    {
-      toast.success("Booking Successful 🎉", {
-        description: "Car has been rented successfully!",
-        duration: 3000,
-      });
-    }
+    toast.success("Booking Successful 🎉", {
+      description: "Car has been rented successfully!",
+      duration: 3000,
+    });
   };
 
   return (
-    <div className="flex  justify-between gap-10">
-      <div className="space-y-6">
-        <h1 className="text-[35px] font-bold">{car.name}</h1>
+    <div className="flex flex-col lg:flex-row justify-between gap-10 ">
+      <div className="space-y-6 flex-1">
+        <h1 className="text-[30px] md:text-[35px] font-bold">{car.name}</h1>
 
         <div className="flex items-end space-x-1">
           <span className="text-4xl font-bold bg-primary text-transparent bg-clip-text">
@@ -64,20 +47,27 @@ export default function DetailSection({ carId }: { carId: string | null }) {
         </div>
 
         <div className="space-y-4">
-          <Image src={car.image} alt={car.name} width={600} height={400} />
+          <Image
+            src={car.image}
+            alt={car.name}
+            width={600}
+            height={400}
+            className="rounded-xl object-cover w-full"
+          />
           <Image
             src="/Vehicles/MorePhoto.svg"
             alt="Car Gallery"
             width={600}
             height={400}
+            className="rounded-xl object-cover w-full"
           />
         </div>
       </div>
 
-      <div className="space-y-10">
+      <div className="space-y-10 flex-1">
         <h1 className="text-[20px] font-bold">Technical Specification</h1>
 
-        <div className="grid grid-cols-3 gap-4 mt-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
           {carFeatures.map((feature) => (
             <div
               key={feature.id}
@@ -90,7 +80,7 @@ export default function DetailSection({ carId }: { carId: string | null }) {
           ))}
         </div>
 
-        <Button className="w-[240px] h-[50px]" onClick={handleSubmit}>
+        <Button className="w-full md:w-[240px] h-[50px]" onClick={handleSubmit}>
           Rent a Car
         </Button>
 

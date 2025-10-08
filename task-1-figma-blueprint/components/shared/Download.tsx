@@ -1,22 +1,28 @@
 import Image from "next/image";
 import React from "react";
 
-export default function Download({className}: {className?: string}) {
+interface DownloadProps {
+  className?: string;
+}
+
+export default function Download({ className = "" }: DownloadProps) {
   return (
-    <div className={`flex gap-4 ${className}`}>
+    <div
+      className={`flex flex-wrap items-center justify-center md:justify-start gap-3 ${className}`}
+    >
       <Image
         src="/App Store.svg"
         alt="App Store"
-        width={140}
+        width={150}
         height={45}
-        className="cursor-pointer"
+        className="cursor-pointer hover:scale-105 transition-transform duration-300"
       />
       <Image
         src="/Google Play.svg"
-        alt="Play Store"
-        width={140}
+        alt="Google Play"
+        width={150}
         height={45}
-        className="cursor-pointer"
+        className="cursor-pointer hover:scale-105 transition-transform duration-300"
       />
     </div>
   );
