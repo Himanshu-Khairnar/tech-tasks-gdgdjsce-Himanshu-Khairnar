@@ -13,7 +13,7 @@ export default function Banner() {
 
   return (
     <section className="relative bg-primary py-16 px-6 md:px-16 rounded-2xl text-center mt-10 overflow-hidden">
-      <div className="absolute -left-3 top-2/5 -translate-y-1/2 w-[700px] opacity-70 rotate-[20deg]">
+      <div className="absolute -left-3 top-2/5 -translate-y-1/2 w-[700px] opacity-70 rotate-[20deg] hidden sm:block">
         <Image
           src="/HomePage/grip2.svg"
           alt="Grip texture"
@@ -23,32 +23,33 @@ export default function Banner() {
         />
       </div>
 
-      <div className="absolute inset-0 flex justify-center items-center opacity-20 ">
+      <div className="absolute inset-0 flex justify-center items-center opacity-20">
         <Image
           src="/HomePage/BlurCarBanner.svg"
           alt="Car background"
           width={700}
           height={300}
-          className="object-contain "
+          className="object-contain"
         />
       </div>
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
         Facts In Numbers
       </h2>
-      <p className="text-white/80 max-w-2xl mx-auto mb-10 text-sm md:text-base">
+      <p className="text-white/80 max-w-2xl mx-auto mb-10 text-sm md:text-base px-2">
         Amet cras hac orci lacus. Faucibus ipsum arcu lectus nibh sapien
         bibendum ullamcorper in. Diam tincidunt tincidunt erat at semper
-        fermentum
+        fermentum.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
         {facts.map((fact, index) => (
           <Card
             key={index}
-            className="flex items-center justify-center rounded-2xl shadow-lg h-[80px] w-[180px] bg-gray-50 hover:bg-gray-100 hover:shadow-md transition-all duration-200"
+            className="flex items-center justify-center w-[90%] sm:w-[200px] h-[90px] rounded-2xl shadow-lg bg-gray-50 hover:bg-gray-100 hover:shadow-md transition-all duration-200"
           >
-            <CardContent className="flex items-center gap-4 p-4 ">
-              <div className="bg-secondary hover:bg-secondary/5 p-3 rounded-xl flex items-center justify-center">
+            <CardContent className="flex items-center gap-4 p-4">
+              <div className="bg-secondary p-3 rounded-xl flex items-center justify-center">
                 <Image src={fact.img} alt={fact.label} width={24} height={24} />
               </div>
               <div className="text-left">

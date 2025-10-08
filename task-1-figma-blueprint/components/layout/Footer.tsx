@@ -17,38 +17,53 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-white  py-4 mb-10 ">
-      <div className="flex justify-between items-center py-10 ">
+    <footer className="bg-white py-10  border-gray-100">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-10 border-gray-200">
         <div className="flex items-center gap-2">
-          <Image src="/Logo.svg" alt="Car Icon" width={32} height={32} />{" "}
-          <span className="font-semibold text-lg text-gray-900">
-            Car Rental
-          </span>
+          <Image src="/Logo.svg" alt="Car Icon" width={32} height={32} />
+          <span className="font-semibold text-lg text-gray-900">Car Rental</span>
         </div>
-        {Icon.map((item, index) => (
-          <IconDetail key={index} item={item} />
-        ))}{" "}
+
+        <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+          {Icon.map((item, index) => (
+            <IconDetail key={index} item={item} />
+          ))}
+        </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 pt-10">
         <div>
-          <h3 className="font-semibold mb-2">Faucibus faucibus pellentesque dictum turpis. Id pellentesque turpis massa a id
-            iaculis lorem tincidunt.</h3>
-          <div className="flex gap-4">
-            <Facebook size={20} className="text-white bg-black p-1 h-6 w-6 rounded-[50%] hover:text-primary" />
-            <Instagram size={20} className="text-white bg-black p-1 h-6 w-6 rounded-[50%] hover:text-primary" />
-            <X size={20} className="text-white bg-black p-1 h-6 w-6 rounded-[50%] hover:text-primary" />
-            <Youtube size={20} className="text-white bg-black p-1 h-6 w-6 rounded-[50%] hover:text-primary" />
+          <h3 className="font-bold  mb-4 leading-relaxed">
+            Faucibus faucibus pellentesque dictum turpis. Id pellentesque turpis
+            massa a id iaculis lorem tincidunt.
+          </h3>
+          <div className="flex gap-4 mt-2">
+            <Facebook
+              size={20}
+              className="text-white bg-black p-1 h-6 w-6 rounded-full hover:bg-primary transition"
+            />
+            <Instagram
+              size={20}
+              className="text-white bg-black p-1 h-6 w-6 rounded-full hover:bg-primary transition"
+            />
+            <X
+              size={20}
+              className="text-white bg-black p-1 h-6 w-6 rounded-full hover:bg-primary transition"
+            />
+            <Youtube
+              size={20}
+              className="text-white bg-black p-1 h-6 w-6 rounded-full hover:bg-primary transition"
+            />
           </div>
         </div>
 
-        
         <div>
-          <h4 className="font-semibold mb-3">Useful links</h4>
-          <ul className="space-y-1">
+          <h4 className="font-semibold mb-3 text-gray-900">Useful Links</h4>
+          <ul className="space-y-2">
             {links.useful.map((link) => (
               <li
                 key={link}
-                className="text-sm text-black hover:text-primary cursor-pointer"
+                className="text-sm text-gray-700 hover:text-primary cursor-pointer transition"
               >
                 {link}
               </li>
@@ -57,12 +72,12 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="font-semibold mb-3">Vehicles</h4>
-          <ul className="space-y-1">
+          <h4 className="font-semibold mb-3 text-gray-900">Vehicles</h4>
+          <ul className="space-y-2">
             {links.vehicles.map((vehicle) => (
               <li
                 key={vehicle}
-                className="text-sm text-black hover:text-primary cursor-pointer"
+                className="text-sm text-gray-700 hover:text-primary cursor-pointer transition"
               >
                 {vehicle}
               </li>
@@ -71,10 +86,14 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="font-semibold mb-3">Download App</h4>
-        <Download className="flex-col justify-center" />
+          <h4 className="font-semibold mb-3 text-gray-900">Download App</h4>
+          <div className="flex flex-col items-start">
+            <Download className="flex-col justify-center" />
+          </div>
         </div>
       </div>
+
+     
     </footer>
   );
 }

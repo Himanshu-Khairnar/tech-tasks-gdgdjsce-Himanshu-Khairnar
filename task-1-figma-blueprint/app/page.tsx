@@ -28,16 +28,17 @@ export default function page() {
   return (
     <div className="min-h-screen space-y-16 page-enter">
       <HeroSection />
-      <div className="flex justify-center gap-20">
-        {features.map((item) => (
-          <Features
-            key={item.name}
-            name={item.name}
-            image={item.image}
-            desc={item.desc}
-          />
-        ))}
-      </div>
+     <div className="flex flex-wrap lg:flex-nowrap justify-center gap-10 ">
+  {features.map((item) => (
+    <Features
+      key={item.name}
+      name={item.name}
+      image={item.image}
+      desc={item.desc}
+    />
+  ))}
+</div>
+
       <InfoBlock />
       <div className="mb-10">
         <ChooseYourCar title={"Choose your car that suits you"} />
